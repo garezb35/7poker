@@ -1,0 +1,65 @@
+<div id="tabsPokerPC" ng-show="isuserLogin">
+    <div class="clearfix pl10 pr10 contbox_tit">
+        <span class="fl mt8  fz13 fw300 txt_shadow shadow_k75 lh27"><strong class="vat inline_block letter0">{{this.user ? this.user.nickname : ""}}</strong></span>
+        <div class="fr mt10 ml100_up">
+            <a class="fl wp40 color_btn color_2a2e3c box_shadow shadow_k05" href="javascript:openPopWindow('//poker.winjoygame.com/Poker/PopUpMyGameNickName', 980, 680);"><span><span class="h20 txt_blue_829 fz12 fw400 tac lh20 txt_shadow shadow_k30 size1">변경</span></span></a>
+            <a class="fl ml4 color_btn color_e0e3eb bg_blue_191 box_shadow shadow_k05" href="javascript:openPopWindow('//poker.winjoygame.com/Poker/PopUpMyGameDefaultMain', 980, 680);"><span><span class="h20 pl5 pr5 txt_44 fz12 fw400 lh20 txt_shadow shadow_w30">내게임정보</span></span></a>
+        </div>
+    </div>
+    <div class="my-info">
+        <div class="hidden mt3  mb10">
+            <div class="hidden">
+                <div class="relative fl my_avatar_info">
+                    <div class="avatar-inner">
+                        <span class="thumb">
+                            <img alt="" src="//webstatic.winjoygame.com/item_img/images/Layer14/L14_1.gif" class="relative index5 _setUserAvatar">
+                        </span>
+
+                    </div>
+                </div>
+                <div class="fl ml12 my_avatar_text">
+                    <div class="hidden block mt2 mr3 bul_txt gray3">
+                        <p class="fl wp65 txt_blue_859 fz12  letter1 lh20">골드머니 : </p>
+                        <p class="fl wp50  fz12 tar  letter1 lh20">{{this.getAmountType(this.user ? user.gold : 0)}}원</p>
+                    </div>
+
+                    <div class="hidden block mt2 mr3 bul_txt gray3">
+                        <p class="fl wp65 txt_blue_859 fz12  letter1 lh20">실버머니 : </p>
+                        <p class="fl wp50  fz12 tar  letter1 lh20">{{this.getAmountType(this.user ? user.silver : 0)}}원</p>
+                    </div>
+
+                    <div class="hidden block mt2 mr3 bul_txt gray3">
+                        <p class="fl wp65 txt_blue_859 fz12  letter1 lh20">보유캐쉬 : </p>
+                        <p class="fl wp50  fz12 tar  letter1 lh20"><span class="txt_yellow_ffc" id="txt_cash">{{this.getAmountType(this.user ? user.money : 0)}}</span>원</p>
+                    </div>
+                    <div class="hidden block mt2 mr3 bul_txt gray3">
+                        <p class="fl wp65 txt_blue_859 fz12  letter1 lh20">회원등급 : </p>
+                        <p class="fl wp50  fz12 tar  letter1 lh20"><img src="{{user ? '/assets/images/profile/vip/'+user.vip+'.png' : ''}}" /></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="mr10 ml10 mb12">
+            <div  class="row">
+                <div class="w50"><button class="gray-btn mr5 w100">마이페이지</button></div>
+                <div class="w50"><button class="gray-btn ml5 w100">닉네임변경</button></div>
+            </div>
+        </div>
+        <div>
+            <p class="family-part">내 패밀리</p>
+            <div class="fl ml12 my_avatar_text w100 pr10 pb10 pt10 pl10">
+                <div class="hidden block mt2 mr3 bul_txt gray3">
+                    <p class="fl wp65 txt_blue_859 fz12  letter1 lh20">가입상품:</p>
+                    <p class="fl wp50  fz12 tar  text-par lh20">골드패밀리</p>
+                    <button class="fr wp90 ml5 gray-btn" >업그레이드</button>
+                </div>
+                <div class="hidden block mt2 mr3 bul_txt gray3">
+                    <p class="fl wp65 txt_blue_859 fz12  letter1 lh20">출금통장:</p>
+                    <p class="fl wp50  fz12 tar  text-par lh20">0원</p>
+                    <button class="fr wp90 ml5 gray-btn" >머니받기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

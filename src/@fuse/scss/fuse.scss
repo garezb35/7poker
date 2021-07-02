@@ -1,0 +1,17 @@
+// Material theming tools
+@import '~@angular/material/theming';
+
+// Breakpoint mixins
+@import "partials/breakpoints";
+
+$my-theme-color: #258BFB;
+$my-theme-text-color: #f0f0f0;// rgba(255, 255, 255, 0.74);
+
+.my-theme-color {
+    background-color: $my-theme-color !important;
+    color: $my-theme-text-color !important;
+}
+
+.my-theme-text-color {
+    color: $my-theme-text-color;
+}

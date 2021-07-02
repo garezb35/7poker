@@ -1,0 +1,38 @@
+@import "src/@fuse/scss/fuse";
+
+::ng-deep .user-dialog {
+  @include media-breakpoint('xs') {
+      width: 100%;
+  }
+
+  @include media-breakpoint('gt-xs') {
+      width: 800px;
+  }
+  mat-dialog-container {
+    padding: 0;
+    #game-start{
+      background: url("/assets/images/starter_bg.png");
+      background-repeat:no-repeat;
+      height: 460px;
+      .game-content{
+        position: relative;
+        .btn-starter-download{
+          position: absolute;
+          top: 187px;
+          left: 88px;
+          width: 250px;
+          height: 65px;
+          border-radius: 4px;
+          background-image: linear-gradient(180deg, #4afebf, #03ea9c);
+          text-align: center;
+          line-height: 65px;
+          font-size: 20px;
+          font-weight: 600;
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,605 @@
+// Import Fuse core library
+@import "@fuse/scss/core";
+
+// Import app.theme.scss
+@import "app/app.theme";
+
+// .mat-tab-label {
+//     //flex: 1;
+//     background-color: grey !important;
+// }
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.txt_blue_4a8 {
+    color: #4a81fe;
+}
+
+.txt_yellow_ff7 {
+    color: #ff780b;
+}
+
+.pb10{
+    padding-bottom: 10px;
+}
+
+.pt10{
+    padding-top: 10px;
+}
+.pl10{
+    padding-left: 10px;
+}
+.pr10{
+    padding-right: 10px;
+}
+
+.pl9{
+    padding-left: 9px;
+}
+.pr9{
+    padding-right: 9px;
+}
+.txt_white{
+    color: white !important;
+}
+
+.ml15 {
+    margin-left: 15px;
+}
+.txt_blue_d5d {
+    color: #d5dce6 !important;
+}
+.mr5 {
+    margin-right: 5px;
+}
+.txt_yellow_ffc {
+    color: #ffc548 !important;
+}
+.fw400 {
+    font-weight: 400;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+}
+
+.lh28 {
+    line-height: 28px;
+}
+.mt10 {
+    margin-top: 10px;
+}
+.ml10 {
+    margin-left: 10px;
+}
+.mr10{
+    margin-right: 10px;
+}
+.tac {
+    text-align: center;
+}
+.fw200, .fw300 {
+    font-weight: 300;
+}
+.wp250 {
+    width: 250px;
+}
+.wp145 {
+    width: 145px;
+}
+.wp77{
+    width: 77px;
+}
+.ml30 {
+    margin-left: 30px;
+}
+
+.lh16 {
+    line-height: 16px;
+}
+
+.wp65{
+    width:65px;
+}
+
+.lh30 {
+    line-height: 30px;
+}
+
+.mt4 {
+    margin-top: 4px;
+}
+
+.bg_dia {
+    background-color: #9154ac;
+}
+
+.color_btn{
+    span{
+        display: block;
+        margin: 1px;
+    }
+}
+
+.simplified{
+    .mat-select-value{
+        color: white;
+    }
+}
+
+.color_btn.color_3b3b3b{
+    span{
+        background: linear-gradient(to bottom,#4b4b4b,#242424);
+    }
+}
+.txt_shadow.shadow_k30, .txt_shadow.shadow_k30.size1 {
+    text-shadow: 0 0 2px #000;
+}
+
+.mt25{
+    margin-top: 15px;
+}
+
+.wp1140{
+    width: 1140px;
+}
+.mlauto {
+    margin-left: auto;
+}
+
+.mrauto {
+    margin-right: auto;
+}
+
+.lh23 {
+    line-height: 23px;
+}
+.h23 {
+    height: 23px;
+}
+.wp102 {
+    width: 102px;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.mt17 {
+    margin-top: 22px;
+}
+.vat {
+    vertical-align: top;
+}
+
+.fz12 {
+    font-size: 12px;
+}
+.ml5 {
+    margin-left: 5px!important;
+}
+
+.border_blue_141 {
+    border: 1px solid #14171f;
+}
+.bg_blue_1f2, .btn_select>p>span {
+    background-color: #1f222c;
+}
+.wp580 {
+    width: 460px;
+}
+
+.mg5 {
+    margin: 5px;
+}
+.wp73 {
+    width: 73px;
+}
+.h81 {
+    height: 81px;
+}
+.block {
+    display: block;
+}
+.lh55 {
+    line-height: 55px;
+}
+.h55 {
+    height: 55px;
+}
+.fz18 {
+    font-size: 18px;
+}
+.lh26 {
+    line-height: 26px;
+}
+.mt2 {
+    margin-top: 2px;
+}
+
+.mt40{
+    margin-top: 40px;
+}
+
+.bg_yellow_ffc {
+    background-color: #ffc600;
+}
+
+.txt_red_402 {
+    color: #402613 !important;
+}
+.fw600 {
+    font-weight: 600;
+}
+
+.hidden {
+    overflow: hidden;
+}
+.border_db {
+    border: 1px solid #dbdbdb;
+}
+.pr20 {
+    padding-right: 20px;
+}
+.pl20 {
+    padding-left: 20px;
+}
+.mt3 {
+    margin-top: 3px!important;
+}
+.mb3{
+    margin-bottom: 3px;
+}
+.fz11 {
+    font-size: 11px;
+}
+.txt_80 {
+    color: gray;
+}
+.mt8 {
+    margin-top: 8px;
+}
+
+
+.mat-autocomplete-panel {
+    mat-option.mat-active {
+        background-color: #CCC !important;
+    }
+}
+
+ .taglist {
+    .mat-icon-button {
+        display: none !important;
+    }
+}
+
+.full-screen  {
+    max-width: 80vw !important;
+    @include media-breakpoint('xs') {
+        max-width: 100vw !important;
+    }
+
+    .mat-dialog-container {
+        box-shadow: none !important;
+        background: white !important;
+        padding: 20px !important;
+        
+        @include media-breakpoint('xs') {
+            padding: 10px !important;
+            margin: 10px !important;
+        }
+
+        .mat-dialog-content {
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+
+        .full-carousel {
+            width: 600px;
+            height: 600px;
+
+            @include media-breakpoint('xs') {
+                width: 100%;
+                height: 100%;
+            }
+
+
+            .slide-arrow:hover {
+                opacity: 1;
+            }
+    
+            .slide-arrow:hover {
+                opacity: 1;
+            }
+    
+            .slide-arrow {
+                opacity: 0.7;
+                width:40px;
+                height: 40px;
+                padding: 8px;
+                background-color: #CCCCCC;
+                border-radius: 50%;
+            }  
+
+            .slide-arrow.left {
+                padding-left: 6px;
+            }
+
+            .slide-arrow.right {
+                padding-right: 6px;
+                float: right;
+            }
+
+            .arrows {
+                position: absolute;
+                width: 600px;
+
+                top: 50%;
+                margin-top: -20px;
+                left: 50%;
+                margin-left: -300px;
+                
+                padding-left: 10px;
+                padding-right: 10px;
+
+
+                @include media-breakpoint('xs') {
+                    width: 100%;
+                    left: 0px;
+                    top: 50%;
+                    margin-top: -20px;
+                    margin-left: 0px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+                
+            }
+    
+        }
+    }
+}
+
+.color_btn.color_ffffff {
+    >span{
+        >span{
+                background: linear-gradient(to bottom, #2d6aa7, #1c5794);
+                color: #fff;
+        }
+    }
+}
+
+.color_btn.block {
+    display: block;
+}
+
+.box_shadow.shadow_k10 {
+    box-shadow: 0 1px 0 rgb(0 0 0 / 10%);
+}
+
+.wp68 {
+    width: 40px;
+}
+
+.txt_44 {
+    color: #444;
+}
+.pb30, .pb31 {
+    padding-bottom: 30px;
+}
+.h277 {
+    height: 226px;
+}
+.h20 {
+    height: 20px;
+}
+.lh20 {
+    line-height: 20px;
+}
+
+.mt22 {
+    margin-top: 22px;
+}
+
+.wp85 {
+    width: 85px;
+}
+
+.ml4_up {
+    margin-left: -4px;
+}
+.wp75 {
+    width: 75px;
+}
+
+.h83 {
+    height: 83px;
+}
+.border_9c {
+    border: 1px solid #9c9c9c;
+}
+
+.w100 {
+    width: 100% !important;
+}
+
+.pl30 {
+    padding-left: 30px;
+}
+.mr30 {
+    margin-right: 30px;
+}
+.ml25 {
+    margin-left: 25px;
+}
+
+.pt15 {
+    padding-top: 15px;
+}
+
+.fz16 {
+    font-size: 16px;
+}
+
+.v-align-base{
+    vertical-align: baseline;
+}
+
+.inline_block {
+    display: inline-block;
+}
+
+.fz17 {
+    font-size: 17px!important;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.txt_77 {
+    color: #777;
+}
+
+.wp90 {
+    width: 90px;
+}
+.bg_gold {
+    background-color: #e5a314;
+}
+.txt_blue_2f5 {
+    color: #2f5ce4;
+}
+.mt30 {
+    margin-top: 30px;
+}
+.pt25{
+    padding-top: 25px;
+}
+
+.pt20{
+    padding-top: 20px;
+}
+.lh14 {
+    line-height: 14px;
+}
+.mb12 {
+    margin-bottom: 12px;
+}
+.pb15 {
+    padding-bottom: 15px;
+}
+.pt15 {
+    padding-top: 15px;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+.mt14 {
+    margin-top: 14px;
+}
+.h100 {
+    height: 73px;
+}
+.lh98 {
+    line-height: 73px;
+}
+.lh22 {
+    line-height: 22px;
+}
+.border_e5_b {
+    border-bottom: 1px solid #e5e5e5;
+}
+.pb8 {
+    padding-bottom: 8px;
+}
+.txt_over {
+    white-space: nowrap;
+}
+.fz13 {
+    font-size: 13px;
+}
+.txt_88 {
+    color: #888 !important;
+}
+.txt_multi, .txt_over {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+    li{
+        float: left;
+        margin-bottom: -1px;
+        position: relative;
+        display: block;
+        >a{
+            margin-right: 2px;
+            line-height: 1.42857143;
+            border: 1px solid transparent;
+            border-radius: 4px 4px 0 0;
+        }
+    }
+
+    li.active{
+        >a:hover,>a:active,>a:focus{
+            color: #555;
+            cursor: default;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+        }
+    }
+}
+
+.gray-btn{
+    background: linear-gradient(to bottom,#fff,#eeeeee);
+    border: 1px solid #cecece;
+    color: #000  !important;
+}
+
+.green-btn{
+    background: linear-gradient(to bottom,#3174b5,#275b97);
+    border: 1px solid #356aa3;
+    color: #fff;
+}
+
+
+.relative {
+    position: relative;
+}
+
+.index5 {
+    z-index: 5;
+}
+.absolute {
+    position: absolute;
+}
+.top2 {
+    top: 2px;
+}
+.right2 {
+    right: 2px;
+}
+.wp26 {
+    width: 26px;
+}
+.mt9 {
+    margin-top: 9px;
+}
+.w50{
+    width: 50%;
+    display: inline-block;
+}
+.text-par{
+    color: #6d99c8;
+    font-weight: bold;
+}

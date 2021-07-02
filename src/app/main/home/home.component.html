@@ -1,0 +1,85 @@
+<div id="home" class="page-layout blank">
+    <div class="clearfix main_toparea">
+            <div class="hidden wp1140 mrauto mlauto gnb_area" fxLayout="row" fxLayoutAlign="center center">
+                <a href="/home"   class="fl logo" fxFlex="0 0 auto" fxLayout="row">
+                    <img src="/assets/images/logo.png" alt="POKER">
+                </a>
+            </div>
+        <div class = "user_info_area" fxlayout="row">
+                <div class="user_left_area" fxlayout="column" style="flex-direction: column; box-sizing: border-box; display: flex;">
+                    <div class="user_family_area blue_cont_box">
+                        <p class="hidden pl10 pr10 contbox_tit"><span class="block txt_white fz14">나의 윈조이 멤버스</span></p>
+                        <div class="hidden h100 mg10 bg_blue_1f2 border_blue_141 tac lh98" *ngIf="!isLoggedIn">
+                            <p class="mt25 txt_white fz16 fw400 lh22">나의 윈조이 멤버스는<br>로그인 후 확인 가능합니다.</p>
+                        </div>
+                    </div>
+                    <div class="mt5 user_avatar_avatar blue_cont_box" >
+                        <p class="hidden pl10 pr10 contbox_tit">
+                            <span class="fl txt_white fz14 txt_shadow shadow_k75">포커아바타</span>
+                            <a href="#" class="fr txt_white fz12">더보기<img src="http://webstatic.winjoygame.com/v1/poker/img/icon/plus_wh8_white.png" alt="+" class="vat mt17 ml5"></a>
+                        </p>
+                        <div class="hidden mt10 pl9 pr9 mb10">
+                            <div class="fl bg_blue_1f2 border_blue_141">
+                                <p class="mg5">
+                                    <img src="http://webstatic.winjoygame.com/v1/poker/img/mainvisual/main_bottom_banner2.png" alt="" class="block">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              <div class="user_center_area j-main-rolling-root" fxlayout="column" style="flex-direction: column; box-sizing: border-box; display: flex;">
+                  <div class="mainbanner_box j-main-rolling-img">
+                      <ngx-slick-carousel class="carousel"
+                                          #slickModal="slick-carousel"
+                                          [config]="slideConfig"
+                                          (afterChange)="afterChange($event)">
+                          <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+                              <img src="{{ slide.img }}" alt="{{ slide.alias }}" width="100%" height="234px">
+                          </div>
+                      </ngx-slick-carousel>
+                  </div>
+                  <div class="banner_title j_main_rolling_txt">
+                      <div class="" *ngIf="slides?.length > 0">
+                          <a href="{{slides[0].link}}" class="j-main-rolling-txt-item">{{slides[0].alias}}</a>
+                      </div>
+                      <div class="pager">
+                          <a (click)="PreBanner()"  class="btn_prev j-main-rolling-prev">이전배너</a>
+                          <div class="state_num">
+                              <span class="j-main-rolling-state-now">1</span>
+                              <span>/</span>
+                              <span class="j-main-rolling-state-total">{{slides.length}}</span>
+                          </div>
+                          <a (click)="NextBanner()"  class="btn_next j-main-rolling-next">다음배너</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="user_right_area blue_cont_box" *ngIf="!isLoggedIn">
+                  <div class="mt10 ml10 mr10 bg_blue_1f2 border_blue_141 pd9">
+                      <p class="mb12 tac"><img src="http://webstatic.winjoygame.com/v1/poker/img/main/main_userinfo_logo.png" alt="WINJOY" class=" vat mt14"></p>
+                      <p class=" mb20 user_info_before fw400">로그인 후 서비스 이용이 가능합니다.</p>
+                      <a href="javascript:"
+                         id="btnLogin"
+                         class="block h55 bg_yellow_ffc txt_red_402 fz18 fw600 tac lh55"
+                         (click)="toggleUser()" >로그인 하기</a>
+                  </div>
+                  <p class="find_info">
+                      <a href="javascript:openPopFindId('//member.winjoygame.com/LoginPop/FindIdPw')" class="fl txt_blue_d5d fz14 fw300">아이디 / 비밀번호 찾기</a>
+                      <a href="#" class="fr txt_yellow_ffc fz14 fw300">회원가입</a>
+                  </p>
+                  <div class="ad_area">
+                      <a id="btn_marble" href="javascript:">
+                          <img src="http://webstatic.winjoygame.com/v1/poker/img/main/transfer_ad.png" alt="기존 넷마블 계정으로 이용하시려면 이전신청 하기" class="">
+                      </a>
+                  </div>
+              </div>
+        </div>
+    </div>
+    <div class="section-second">
+        <app-channel [isLoggedIn]="isLoggedIn" [user]='user'></app-channel>
+        <div class="clearfix wp1140 pt40 mlauto mrauto main_bottomarea">
+            <app-avata-area></app-avata-area>
+            <app-level-bonus></app-level-bonus>
+           <app-avatar [user]='user'></app-avatar>
+        </div>
+    </div>
+</div>

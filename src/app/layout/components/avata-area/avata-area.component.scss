@@ -1,0 +1,37 @@
+:host {
+    ::ng-deep {
+        .mat-tab-label {
+            min-width: 20% !important;
+            border-right: 2px solid #c1d8e7;
+            border-bottom: 2px solid #c1d8e7;
+            opacity: 1;
+        }
+        .mat-tab-label:last-child{
+            border-right: none;
+        }
+        .mat-ink-bar{
+            display: none;        
+        }
+        .mat-tab-label-active{
+            border-bottom: none;
+        }
+        .mat-tab-header{
+            border-bottom: none  !important;
+        }
+    }
+
+    .gostop_avatar_area{
+        border: 10px solid #c1d8e7;
+        .itemcheckbox{
+            display: inline-block;
+        }
+        .color_ffffff{
+            display: inline-block;
+        }
+        .footer-item{
+            border-top: 1px solid #e8f4fb;
+        }
+    }
+
+}
+

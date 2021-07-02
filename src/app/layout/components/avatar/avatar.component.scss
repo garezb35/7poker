@@ -1,0 +1,76 @@
+#tabsPokerPC{
+    width: 320px;
+    float: right;
+    border: 1px solid #ececec;
+    .my-info{
+        .contbox_tit{
+            position: relative;
+            padding-top: 0;
+            border-bottom: 1px solid #ececec;
+            box-shadow: none;
+            line-height: normal;
+            background: #fafafa;
+        }
+        .money_number{
+            height: 51px;
+            line-height: 51px;
+            border-bottom: 1px solid #ececec;
+            .letter1{
+                color: #135ba7;
+                font-weight: bold;
+            }
+            .letter2{
+                font-weight: bold;
+            }
+            
+        }
+        .my_avatar_info{
+            width: 144px;
+            height: 149px;
+            padding: 8px;
+            .avatar-inner{
+                position: relative;
+            }
+            .thumb{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 112px;
+                height: 127px;
+                background: #0e1116;
+    
+            }
+            .btn-avatar-change{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 23px;
+                border: 1px solid #101218;
+                margin-top: 3px;
+                font-size: 11px;
+                color: #646f7e;
+                background: linear-gradient(to top, #1f222c 0%, #2b2f3d 100%);
+                border-collapse: separate;
+                box-shadow: 0 1px 0 rgb(7 0 2 / 10%), 1px 0 0 inset #343c4d, 0 1px 0 inset #343c4d, -1px -1px 0 inset #343c4d;
+            }
+        }
+        .my_avatar_text{
+            width: 165px;
+            .bul_txt.gray3 {
+                padding-left: 11px;
+                background: url(https://webstatic.winjoygame.com/v1/poker/img/icon/bul_wh3_square_gray.png) no-repeat 0 center;
+            }
+        }
+
+        .family-part{
+            line-height: 30px;
+            height: 30px;
+            border-top: 1px solid #ececec;
+            background: #f8f8f8;
+            color: #000;
+            padding-left: 10px;
+            font-weight: bold;
+        }
+    }
+  
+}
