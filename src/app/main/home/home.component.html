@@ -1,16 +1,16 @@
 <div id="home" class="page-layout blank">
     <div class="clearfix main_toparea">
             <div class="hidden wp1140 mrauto mlauto gnb_area" fxLayout="row" fxLayoutAlign="center center">
-                <a href="/home"   class="fl logo" fxFlex="0 0 auto" fxLayout="row">
+                <a href="/"   class="fl logo" fxFlex="0 0 auto" fxLayout="row">
                     <img src="/assets/images/logo.png" alt="POKER">
                 </a>
             </div>
         <div class = "user_info_area" fxlayout="row">
                 <div class="user_left_area" fxlayout="column" style="flex-direction: column; box-sizing: border-box; display: flex;">
                     <div class="user_family_area blue_cont_box">
-                        <p class="hidden pl10 pr10 contbox_tit"><span class="block txt_white fz14">나의 윈조이 멤버스</span></p>
+                        <p class="hidden pl10 pr10 contbox_tit"><span class="block txt_white fz14">나의 ONEGAME 멤버스</span></p>
                         <div class="hidden h100 mg10 bg_blue_1f2 border_blue_141 tac lh98" *ngIf="!isLoggedIn">
-                            <p class="mt25 txt_white fz16 fw400 lh22">나의 윈조이 멤버스는<br>로그인 후 확인 가능합니다.</p>
+                            <p class="mt25 txt_white fz16 fw400 lh22">나의 ONEGAME 멤버스는<br>로그인 후 확인 가능합니다.</p>
                         </div>
                     </div>
                     <div class="mt5 user_avatar_avatar blue_cont_box" >
@@ -55,7 +55,7 @@
               </div>
               <div class="user_right_area blue_cont_box" *ngIf="!isLoggedIn">
                   <div class="mt10 ml10 mr10 bg_blue_1f2 border_blue_141 pd9">
-                      <p class="mb12 tac"><img src="http://webstatic.winjoygame.com/v1/poker/img/main/main_userinfo_logo.png" alt="WINJOY" class=" vat mt14"></p>
+                      <p class="mb12 tac"></p>
                       <p class=" mb20 user_info_before fw400">로그인 후 서비스 이용이 가능합니다.</p>
                       <a href="javascript:"
                          id="btnLogin"
@@ -63,7 +63,7 @@
                          (click)="toggleUser()" >로그인 하기</a>
                   </div>
                   <p class="find_info">
-                      <a href="javascript:openPopFindId('//member.winjoygame.com/LoginPop/FindIdPw')" class="fl txt_blue_d5d fz14 fw300">아이디 / 비밀번호 찾기</a>
+                      <a href="#" class="fl txt_blue_d5d fz14 fw300">아이디 / 비밀번호 찾기</a>
                       <a href="#" class="fr txt_yellow_ffc fz14 fw300">회원가입</a>
                   </p>
                   <div class="ad_area">
@@ -72,6 +72,16 @@
                       </a>
                   </div>
               </div>
+              <div class="user_right_area blue_cont_box" *ngIf="isLoggedIn">
+                <div class="mt10 ml10 mr10 pd9">
+                    <span class="fz18 txt_white">7포커</span>
+                    <span class="fz12 txt_white">현재 1위 랭크 카지노에서 잭팟에 도전하세요</span><br>
+                    <img src="/assets/images/139.png" class="mt10 mb20"/>
+                    <p class="fz12 txt_white">현재 1위 랭크 카지노에서 잭팟에 도전하세요</p>
+                    <p class="fz12 txt_white mt10 mb20">현재 1위 랭크 카지노에서 잭팟에 잭팟에 도전하세요</p>
+                    <a href="javascript:" (click)="downloadApp()" class="pb10 block"><img src="/assets/images/download.png" /></a>
+                </div>
+              </div>
         </div>
     </div>
     <div class="section-second">
@@ -79,7 +89,8 @@
         <div class="clearfix wp1140 pt40 mlauto mrauto main_bottomarea">
             <app-avata-area></app-avata-area>
             <app-level-bonus></app-level-bonus>
-           <app-avatar [user]='user'></app-avatar>
+           <app-avatar [user]='user' *ngIf="isLoggedIn"></app-avatar>
+           <img class="ml10" src="/assets/images/ad.png" *ngIf="!isLoggedIn"/>
         </div>
     </div>
 </div>

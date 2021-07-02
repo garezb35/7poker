@@ -25,10 +25,10 @@ export class HomeComponent implements OnInit
     user: any = null;
     @ViewChild('slickModal', { static: true }) slickModal: SlickCarouselComponent;
     slides = [
-        {img: '/assets/images/banner/1.png', alias: '윈조이플러스 오픈', link: 'https://poker.winjoygame.com/poker?gameEname=baccarat'},
-        {img: '/assets/images/banner/1.png', alias: '윈조이플러스 오픈', link: 'https://poker.winjoygame.com/poker?gameEname=baccarat'},
-        {img: '/assets/images/banner/1.png', alias: '윈조이플러스 오픈', link: 'https://poker.winjoygame.com/poker?gameEname=baccarat'},
-        {img: '/assets/images/banner/1.png', alias: '윈조이플러스 오픈', link: 'https://poker.winjoygame.com/poker?gameEname=baccarat'}
+        {img: '/assets/images/banner/1.png', alias: 'ONEGAWE플러스 오픈', link: ''},
+        {img: '/assets/images/banner/1.png', alias: 'ONEGAWE플러스 오픈', link: ''},
+        {img: '/assets/images/banner/1.png', alias: 'ONEGAWE플러스 오픈', link: ''},
+        {img: '/assets/images/banner/1.png', alias: 'ONEGAWE플러스 오픈', link: ''}
     ];
 
     slideConfig = {'slidesToShow': 1, 'slidesToScroll': 1, dots: false, prevArrow: null, nextArrow: null, autoplay: true};
@@ -101,5 +101,9 @@ export class HomeComponent implements OnInit
     // tslint:disable-next-line:typedef
     PreBanner() {
         this.slickModal.slickPrev();
+    }
+
+    downloadApp(){
+      window.location.href="/assets/game/WinjoyStarterInstaller.exe";
     }
 }

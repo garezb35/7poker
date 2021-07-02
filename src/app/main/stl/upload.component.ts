@@ -32,7 +32,7 @@ export class UploadSTLComponent
     postId: any;
 
     dialogRef ;
-    
+
     @BlockUI() blockUI: NgBlockUI;
 
     searchControl: FormControl;
@@ -47,26 +47,26 @@ export class UploadSTLComponent
     user: any;
 
     stlInfo: any;
-    
+
       slideConfig = {"slidesToShow": 1, "slidesToScroll": 1, "arrows": false};
       @ViewChild('slickModal') slickModal;
 
       slideConfig_thumb = {"slidesToShow": 3, "slidesToScroll": 1, "arrows": false, "draggable": false};
         @ViewChild('slickModal_thumb') slickModal_thumb;
-      
-      
+
+
       slickInit(e) {
         //console.log('slick initialized');
       }
-      
+
       breakpoint(e) {
         //console.log('breakpoint');
       }
-      
+
       afterChange(e) {
         //console.log('afterChange');
       }
-      
+
       beforeChange(e) {
         //console.log('beforeChange');
         if (e.currentSlide == e.nextSlide)
@@ -103,7 +103,7 @@ export class UploadSTLComponent
     /**
      * Constructor
      *
-     * @param 
+     * @param
      */
     constructor(
         private _formBuilder: FormBuilder,
@@ -141,11 +141,11 @@ export class UploadSTLComponent
                     }, 1000, this);
 
 
-                    
+
                     this.stlFile = {
-                        name: data['data']['assetFile'].split('/').pop().split(/\#|\?/)[0], 
+                        name: data['data']['assetFile'].split('/').pop().split(/\#|\?/)[0],
                         path: data['data']['assetFile']
-                    };                    
+                    };
                 }
             });
         }
@@ -153,7 +153,7 @@ export class UploadSTLComponent
 
 
         //this.tagInput.isLoading = true;
-        this.postService.getTagCandidates('').subscribe((data) => {    
+        this.postService.getTagCandidates('').subscribe((data) => {
             if (data && data['success'] == 1) {
                 this.autoCompleteTags = this.items = data.data;
             }
@@ -188,7 +188,7 @@ export class UploadSTLComponent
             && !!this.pf.description.value && this.tags.length > 0 && this.photos.length > 0 && !!this.stlFile ;
     }
 
-    onAddImage(id): void 
+    onAddImage(id): void
     {
         document.getElementById(id).click();
     }
@@ -201,7 +201,7 @@ export class UploadSTLComponent
     onTagsFocus() {
         // this.tagInput.isLoading = true;
 
-        // this.postService.getTagCandidates('').subscribe((data) => {    
+        // this.postService.getTagCandidates('').subscribe((data) => {
         //     if (data && data['success'] == 1) {
         //         this.autoCompleteTags = data.data;
         //     }
@@ -293,8 +293,8 @@ export class UploadSTLComponent
         })
     }
 
-    
-    onAddPhoto() : void 
+
+    onAddPhoto() : void
     {
         document.getElementById('photofile').click();
     }
@@ -315,7 +315,7 @@ export class UploadSTLComponent
 
     onPhotoCropperReady() : void
     {
-        
+
         console.log("onPhotoCropperReady");
     }
 
@@ -325,7 +325,7 @@ export class UploadSTLComponent
         this.dialogRef.close();
     }
 
-    onRemovePhoto(photo) : void 
+    onRemovePhoto(photo) : void
     {
         let pos = this.photos.indexOf(photo);
         if ( pos == -1 ) {
@@ -344,14 +344,14 @@ export class UploadSTLComponent
             title : [''],
             coins : [''],
             description : [''],
-        }); 
+        });
     }
     onSTLFileInput(file): void
     {
         this.stlFile = file;
     }
 
-    onDrop(event) : void 
+    onDrop(event) : void
     {
         //console.log(this.divPhotos);
         this.updatePhotoList();
@@ -359,7 +359,7 @@ export class UploadSTLComponent
 
     }
 
-    updatePhotoList() : void 
+    updatePhotoList() : void
     {
         this.updatedPhotos = [];
         for ( var i = 0 ; i < this.divPhotos.nativeElement.children.length; i++) {
@@ -368,7 +368,7 @@ export class UploadSTLComponent
         // console.log(this.updatedPhotos);
     }
 
-    showError( message ) : void 
+    showError( message ) : void
     {
         alert(message);
     }
@@ -386,12 +386,12 @@ export class UploadSTLComponent
                 } else {
                   console.log(error);
                 }
-    
+
               });
         } else {
             this.postService.create(this.stlInfo).pipe(first()).subscribe((data) => {
                 this.blockUI.stop();
-                this.router.navigate(['/home']);
+                this.router.navigate(['/']);
               }, (error) => {
                 this.blockUI.stop();
                 if (error instanceof HttpErrorResponse) {
@@ -399,13 +399,13 @@ export class UploadSTLComponent
                 } else {
                   console.log(error);
                 }
-    
+
               });
         }
-        
+
     }
 
-    uploadSTLFile(): void 
+    uploadSTLFile(): void
     {
 
         if ( this.stlFile.path ) {
@@ -422,31 +422,31 @@ export class UploadSTLComponent
             if (err || !data.Location) {
                 this.blockUI.stop();
                 this.showError('There was an error uploading your photo.');
-                
+
                 return err;
             }
 
             this.stlInfo['assetFile'] = data.Location;
 
             this.uploadSTLInfo();
-            
+
         });
 
-    } 
+    }
 
-    uploadPhoto( pos ): void 
+    uploadPhoto( pos ): void
     {
         if ( pos == this.updatedPhotos.length ) {
             this.uploadSTLFile();
             return;
-        } 
+        }
 
         if ( this.updatedPhotos[pos].startsWith('http')) {
             this.stlInfo['photos'].push(this.updatedPhotos[pos]);
             this.uploadPhoto(pos+1);
             return;
         }
-        
+
         this.s3UploaderService.uploadPhoto(this.updatedPhotos[pos], (err, data) => {
             // if ( true ) {
             //     err = null;
@@ -456,14 +456,14 @@ export class UploadSTLComponent
             if (err || !data.Location) {
                 this.blockUI.stop();
                 this.showError('There was an error uploading your photo.');
-                
+
                 return err;
             }
 
             this.stlInfo['photos'].push(data.Location);
 
             this.uploadPhoto(pos+1);
-            
+
           });
 
     }
@@ -492,5 +492,5 @@ export class UploadSTLComponent
         // }, 2000);
     }
 
-    
+
 }

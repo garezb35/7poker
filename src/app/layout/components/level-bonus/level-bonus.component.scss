@@ -1,7 +1,7 @@
 :host {
     ::ng-deep {
         .mat-tab-label {
-            min-width: 25% !important;
+            min-width: 33% !important;
             border-right: 2px solid #e2e2e2;
             border-bottom: 2px solid #e2e2e2;
             opacity: 1;
@@ -10,7 +10,7 @@
             border-right: none;
         }
         .mat-ink-bar{
-            display: none;        
+            display: none;
         }
         .mat-tab-label-active{
             border-bottom: none;
@@ -23,7 +23,7 @@
     }
 
     .level-bonus{
-        // width: 273px;
+        width: 300px;
         float: left;
         margin-left: 25px;
         border: 2px solid #e2e2e2;
