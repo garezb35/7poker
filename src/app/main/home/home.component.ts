@@ -25,10 +25,10 @@ export class HomeComponent implements OnInit
     user: any = null;
     @ViewChild('slickModal', { static: true }) slickModal: SlickCarouselComponent;
     slides = [
-        {img: '/assets/images/banner/1.png', alias: 'ONEGAWE플러스 오픈', link: ''},
-        {img: '/assets/images/banner/1.png', alias: 'ONEGAWE플러스 오픈', link: ''},
-        {img: '/assets/images/banner/1.png', alias: 'ONEGAWE플러스 오픈', link: ''},
-        {img: '/assets/images/banner/1.png', alias: 'ONEGAWE플러스 오픈', link: ''}
+        {img: '/assets/images/banner/1.png', alias: 'ONEGAME플러스 오픈', link: ''},
+        {img: '/assets/images/banner/1.png', alias: 'ONEGAME플러스 오픈', link: ''},
+        {img: '/assets/images/banner/1.png', alias: 'ONEGAME플러스 오픈', link: ''},
+        {img: '/assets/images/banner/1.png', alias: 'ONEGAME플러스 오픈', link: ''}
     ];
 
     slideConfig = {'slidesToShow': 1, 'slidesToScroll': 1, dots: false, prevArrow: null, nextArrow: null, autoplay: true};
