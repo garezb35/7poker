@@ -76,23 +76,26 @@ export class ChannelComponent implements OnChanges {
                       switch ($thisIdx) {
                           case 1:
                               resetAni($thisCH);
-                              sizeAni(2, 3, 4, 5, '725px', '882px', '158px', '315px', $thisCH.find('.channel'), (Math.abs($activeCH.index() - $thisCH.index())));
+                              sizeAni(2, 3, 4 , '725px', '158px', '315px', $thisCH.find('.channel'), (Math.abs($activeCH.index() - $thisCH.index())));
                               break;
                           case 2:
                               resetAni($thisCH);
-                              sizeAni(1, 3, 4 ,5, '725px', '882px', '158px','315px', $thisCH.find('.channel'), (Math.abs($activeCH.index() - $thisCH.index())));
+                              sizeAni(1, 3, 4, '725px', '158px','315px', $thisCH.find('.channel'), (Math.abs($activeCH.index() - $thisCH.index())));
                               break;
                           case 3:
                               resetAni($thisCH);
-                              sizeAni(1,2, 4,5, '725px', '882px','158px', '315px', $thisCH.find('.channel'), (Math.abs($activeCH.index() - $thisCH.index())));
+                              sizeAni(1,2, 4, '725px','158px', '315px', $thisCH.find('.channel'), (Math.abs($activeCH.index() - $thisCH.index())));
                               break;
                           case 4:
                               resetAni($thisCH);
-                              sizeAni(1, 2, 3,5, '158px', '315px', '725px', '882px', $thisCH.find('.channel'), (Math.abs($activeCH.index() - $thisCH.index())));
+                              sizeAni(1, 2, 3, '158px', '315px', '725px', $thisCH.find('.channel'), (Math.abs($activeCH.index() - $thisCH.index())));
                               break;
-                          case 5:
-                              resetAni($thisCH);
-                              sizeAni(1, 2, 3, 4 , '158px', '315px', '725px', '882px', $thisCH.find('.channel'), (Math.abs($activeCH.index() - $thisCH.index())));
+                          // case 5:
+                          //     resetAni($thisCH);
+                          //     sizeAni(1, 2, 3, 4 , '158px', '315px', '725px', '882px', $thisCH.find('.channel'), (Math.abs($activeCH.index() - $thisCH.index())));
+                          //     break;
+                          default:
+
                               break;
                       }
                   });
@@ -131,18 +134,18 @@ export class ChannelComponent implements OnChanges {
               }
 
               // ANIMATION CHANGE SIZE DEFAULT ONLY
-              function sizeAni(a11, b11, c11, d11, a2, b2, c2, d2, target, idx) {
+              function sizeAni(a11, b11, c11, a2, b2, c2, target, idx) {
                   const a1 = Number(a11),
                       b1 = Number(b11),
-                      c1 = Number(c11),
-                      d1 = Number(d11)
+                      c1 = Number(c11)
+                      // d1 = Number(d11)
                   const $time = 100 + (40 * idx);
                   $totalCH.eq(a1).stop().animate({ width: '153px', left: a2 }, $time);
                   $totalCH.eq(b1).stop().animate({ width: '153px', left: b2 }, $time);
-                  $totalCH.eq(c1).stop().animate({ width: '153px', left: c2 }, $time);
+                  // $totalCH.eq(c1).stop().animate({ width: '153px', left: c2 }, $time);
                   // $totalCH.eq(d1).stop().animate({ width: '153px', left: d2 }, $time);
                   // $totalCH.eq(e1).stop().animate({ width: '153px', left: e2 }, $time);
-                  $totalCH.eq(d1).stop().animate({ width: '153px', left: d2 }, $time, function() {
+                  $totalCH.eq(c1).stop().animate({ width: '153px', left: c2 }, $time, function() {
                       zoomAni(target).then(function() {
                           ($thisCH.find('.channel').next('.effect_coin').length > 0) && coinAni($thisCH.find('.channel').next('.effect_coin'));
                       });
